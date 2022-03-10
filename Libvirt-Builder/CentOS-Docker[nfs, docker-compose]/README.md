@@ -63,6 +63,7 @@ virt-install --name manager \
 
 # How to work? - Worker
 ### Worker1 - KVM1
+```bash
 virt-builder centos-7.4 -o /shared/worker1.qcow2 \
 --size 20G --hostname worker1 --mkdir /nfs \
 --root-password password:test123 --run install_worker.sh \
@@ -72,8 +73,10 @@ virt-builder centos-7.4 -o /shared/worker1.qcow2 \
 --firstboot-command 'sudo mount -t nfs 211.183.3.199:/instance /nfs' \
 --firstboot-command 'sudo $(cat /nfs/manager-token.txt | grep "SWMTKN") ' \
 --selinux-relabel
+```
 
 ### Worker2 - KVM2
+```bash
 virt-builder centos-7.4 -o /shared/worker2.qcow2 \
 --size 20G --hostname worker2 --mkdir /nfs \
 --root-password password:test123 --run install_worker.sh \
@@ -83,6 +86,7 @@ virt-builder centos-7.4 -o /shared/worker2.qcow2 \
 --firstboot-command 'sudo mount -t nfs 211.183.3.199:/instance /nfs' \
 --firstboot-command 'sudo $(cat /nfs/manager-token.txt | grep "SWMTKN") ' \
 --selinux-relabel
+```
 
 # Finish
 ![./images/result.png](./images/result.png)
