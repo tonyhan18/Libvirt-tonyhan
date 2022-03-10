@@ -10,7 +10,7 @@ Checkout Front Page <b>Please!!</b><br>
 
 And Make Like this<br>
 the DB and KVM1, KVM2 is linked by nfs system<br>
-![../images/system.png](../images/system.png)<br>
+![/images/system.png](/images/system.png)<br>
 <br>
 
 if you don't please follow the Front Page's settings
@@ -85,4 +85,4 @@ virt-builder centos-7.4 -o /shared/worker2.qcow2 \
 --selinux-relabel
 
 # Finish
-![result.png](result.png)
+![./images/result.png](./images/result.png)
